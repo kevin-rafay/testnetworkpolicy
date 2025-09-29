@@ -17,8 +17,9 @@ metadata:
   name: my-nginx
   labels:
     app: nginx
+    my: testing
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: nginx
