@@ -1,0 +1,17 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: new-kevinagent
+  project: sample1
+spec:
+  active: true
+  config:
+    concurrency: 55
+    docker:
+      limits:
+        cpu: 250m
+        memory: 1Gi
+    environment:
+      numWorkers: 20
+  type: Docker
+  version: r3.7.0
