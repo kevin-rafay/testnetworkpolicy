@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workload-new-test-oct15
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/krishnarafay/testnetworkpolicy/refs/heads/main/test/nginx-app.yaml
+    type: Yaml
+  namespace: testnamespace1
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kevin-test2
