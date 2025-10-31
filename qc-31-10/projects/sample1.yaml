@@ -1,0 +1,11 @@
+apiVersion: system.k8smgmt.io/v3
+kind: Project
+metadata:
+  name: sample1
+spec:
+  clusterResourceQuota:
+    pods: "1000"
+  defaultClusterNamespaceQuota:
+    pods: "10"
+  driftWebhook:
+    enabled: true
