@@ -1,0 +1,19 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: Addon
+metadata:
+  annotations:
+    rafay.dev/audit_type: BROWSER||Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)
+      AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36
+    rafay.dev/audit_user: kevin.francis@rafay.co
+  name: new1
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/new1/fifty_mb.yaml
+    type: Yaml
+  namespace: test-namespace
+  sharing: {}
+  version: v1
+  versionState: active
