@@ -5,6 +5,10 @@ metadata:
   project: sample1
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      paths:
+      - name: file://artifacts/test-workload2/test-workload2.yaml
     type: Yaml
   namespace: namespace-test1
+  placement:
+    selector: rafay.dev/clusterName=cli-with-sharing-rauto-106845954
