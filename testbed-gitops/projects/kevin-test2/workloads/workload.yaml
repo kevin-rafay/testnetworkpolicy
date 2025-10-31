@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workload
+  project: kevin-test2
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: test1
