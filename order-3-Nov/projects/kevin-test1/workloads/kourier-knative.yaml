@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: kourier-knative
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/kourier-knative/kourier-knative.yaml
+    type: Yaml
+  namespace: knative-test
+  placement:
+    selector: rafay.dev/clusterName=kevin-test2
+  version: kourier-knative-v2-202510290931370000

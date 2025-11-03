@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-drift-workload
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      url:
+      - http://raw.githubusercontent.com/kevin-rafay/testnetworkpolicy/refs/heads/main/test/busybox-test1.yaml
+    type: Yaml
+  namespace: testnamespace1
+  placement:
+    selector: rafay.dev/clusterName=kevin-test-cluster1
+  version: test-drift-workload-v1-202510301551580000

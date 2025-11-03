@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test1
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/kubernetes/website/main/content/en/examples/application/nginx-app.yaml
+    type: Yaml
+  namespace: testnamespace1
+  placement:
+    selector: rafay.dev/clusterName=kevin-test-cluster1
+  version: test1-v2-202510280702350000

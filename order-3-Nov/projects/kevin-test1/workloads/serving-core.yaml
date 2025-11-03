@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: serving-core
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://github.com/knative/serving/releases/download/knative-v1.19.7/serving-core.yaml
+    type: Yaml
+  namespace: knative-test
+  placement:
+    selector: rafay.dev/clusterName=kevin-test2
+  version: serving-core-v1-202510290902350000

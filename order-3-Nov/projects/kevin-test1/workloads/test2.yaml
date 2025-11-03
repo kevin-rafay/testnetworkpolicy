@@ -1,0 +1,15 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test2
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test2/test2.yaml
+    type: Yaml
+  namespace: testnamespace1
+  placement:
+    selector: rafay.dev/clusterName=kevin-test-cluster1
+  version: test2-v1-202510280854580000

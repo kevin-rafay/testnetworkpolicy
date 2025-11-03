@@ -1,0 +1,16 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: tftestworkload1
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/kevin-rafay/testnetworkpolicy/refs/heads/main/test/busybox-test1.yaml
+    options: {}
+    type: Yaml
+  namespace: terraform-test-namespace
+  placement:
+    selector: rafay.dev/clusterName=kevin-test2
+  version: v1

@@ -1,0 +1,17 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: workload-rctl-publish
+  project: kevin-test1
+spec:
+  artifact:
+    artifact:
+      url:
+      - https://raw.githubusercontent.com/krishnarafay/testnetworkpolicy/refs/heads/main/test/nginx-app.yaml
+    type: Yaml
+  namespace: krishna-ns
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kevin-test2
+  version: v2
