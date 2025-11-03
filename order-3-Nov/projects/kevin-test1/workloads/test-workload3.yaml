@@ -1,0 +1,10 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test-workload3
+  project: kevin-test1
+spec:
+  artifact:
+    artifact: {}
+    type: Yaml
+  namespace: swagger-test-namespace
