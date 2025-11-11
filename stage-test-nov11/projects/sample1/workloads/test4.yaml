@@ -1,0 +1,14 @@
+apiVersion: apps.k8smgmt.io/v3
+kind: Workload
+metadata:
+  name: test4
+  project: sample1
+spec:
+  artifact:
+    artifact:
+      paths:
+      - name: file://artifacts/test1/test1.yaml
+    type: Yaml
+  namespace: test1
+  placement:
+    selector: rafay.dev/clusterName=cli-with-sharing-rauto-834980726
