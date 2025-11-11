@@ -5,6 +5,10 @@ metadata:
   project: sample1
 spec:
   artifact:
-    artifact: {}
+    artifact:
+      chartPath:
+        name: file://artifacts/test2/nginx-22.2.3.tgz
+      valuesPaths:
+      - name: file://artifacts/test2/kourier.yaml
     type: Helm
   namespace: test1
