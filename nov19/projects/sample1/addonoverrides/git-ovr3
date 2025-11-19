@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: git-system-ovr3
+  project: sample1
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kevin-test-cluster2
+  resource:
+    selector:
+      name: testaddon1
+      version: v1
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://addon-ovr1/addon-ovr1.yaml
