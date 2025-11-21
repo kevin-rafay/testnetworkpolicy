@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: override-with-addon-version
+  project: sample1
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kevin-test-cluster2
+  resource:
+    selector:
+      name: v1
+      version: v2
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://override-with-addon-version/override-with-addon-version.yaml

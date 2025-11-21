@@ -1,0 +1,12 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: valuesFile
+  name: test1
+  project: sample1
+spec:
+  resource:
+    type: Addon
+  type: Helm

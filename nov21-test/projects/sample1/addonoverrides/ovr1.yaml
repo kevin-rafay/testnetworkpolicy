@@ -1,0 +1,21 @@
+apiVersion: infra.k8smgmt.io/v3
+kind: AddonOverride
+metadata:
+  labels:
+    rafay.dev/overrideScope: clusterLabels
+    rafay.dev/overrideType: manifestsFile
+  name: ovr1
+  project: sample1
+spec:
+  placement:
+    labels:
+    - key: rafay.dev/clusterName
+      value: kevin-cluster-stage
+  resource:
+    selector:
+      name: ov1
+      version: v3
+    type: Addon
+  type: Yaml
+  valuesPath:
+    name: file://ovr1/ovr1.yaml
